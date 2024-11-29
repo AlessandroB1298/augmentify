@@ -5,12 +5,9 @@ export default function Page(){
     if(!user){
         redirect(`/sign-up`)
     }
-    else{
-        console.log(user)
-    }
     return(
-        <div>
-            <h2>Welcome to the home page</h2>
+        <div className={"flex justify-center items-center min-h-screen"}>
+            <h2 className={"text-white text-[64px] font-solid"}>Welcome to the Home Page</h2>
         </div>
     )
 }

@@ -12,15 +12,13 @@ This is neat app that can help user's create a dataset, by augmenting an origina
 
 ## This project uses:
 
-<a href="https://en.wikipedia.org/wiki/HTML5#:~:text=HTML5%20(Hypertext%20Markup%20Language%205,as%20the%20HTML%20Living%20Standard.">
-    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-</a>
-<a href="https://www.w3schools.com/js/">
-    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-</a>
-<a href="https://react.dev/">
-    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
-</a>
+![Clerk](https://cdn.simpleicons.org/clerk/6C47FF)
+![TypeScript](https://cdn.simpleicons.org/typescript/3178C6)
+![React](https://cdn.simpleicons.org/react/61DAFB)
+![Convex](https://cdn.simpleicons.org/convex/7C3AED)
+![HTML5](https://cdn.simpleicons.org/html5/E34F26)
+![Tailwind CSS](https://cdn.simpleicons.org/tailwindcss/06B6D4)
+![Next.js](https://cdn.simpleicons.org/nextdotjs/000000)
 
 ## Running the lcal dev server
 

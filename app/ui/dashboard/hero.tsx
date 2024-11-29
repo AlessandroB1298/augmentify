@@ -8,6 +8,7 @@ import {useRef} from "react";
 
 export default function Hero() {
     const containerRef = useRef<HTMLDivElement | null>(null);
+
     //simple gsap animation
         //move the container from the bottom to the middle of the screen
         useGSAP(() => {
@@ -18,7 +19,6 @@ export default function Hero() {
             )
         });
 
-
     return (
         <main className="flex min-h-screen flex-col p-6">
             <div className="flex items-center justify-center h-screen text-2xl ">
@@ -26,11 +26,18 @@ export default function Hero() {
                     <h1 className={`${lusitana.className} antialiased text-red-700 pb-8 text-center mb-[12vh] text-[32px]`}>
                         <strong>Welcome to Augmentify.</strong>
                     </h1>
+                    <p className={"mb-5"}>Register now</p>
                     <Link
                         href={"/sign-up"}
                         className="flex items-center gap-5 rounded-lg bg-rose-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-red-500 md:text-base"
                     >
                         <span>Sign Up</span> <ArrowRightIcon className="w-5 md:w-6"/>
+                    </Link>
+                    <Link
+                    href={"/sign-in"}
+                    className={"flex items-center text-sm mt-5 hover:text-blue-500"}
+                    >
+                        Already have an Account?
                     </Link>
                 </div>
             </div>

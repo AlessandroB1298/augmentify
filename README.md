@@ -3,12 +3,10 @@
 This is neat app that can help user's create a dataset, by augmenting an original dataset. Allowing the user to synthetically inflate the dataset.
 
 ## This project is for:
+- [ ] Object Detection Models
+- [ ] Image Classification Models
+- [ ] Image Segmentation Models
 
-```
-1.) Object Detection Models
-2.) Image Classification Models
-3.) Image Segmentation Models
-```
 
 ## This project uses:
 

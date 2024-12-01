@@ -1,9 +1,13 @@
 import React from 'react';
-
+import CreateProject from "@/app/ui/components/createProject";
 export default function Page() {
     return (
-        <div className={"flex justify-center items-center min-h-screen"}>
-            <h2 className={"text-white text-[64px] font-solid"}>Welcome to the Project Page</h2>
+        <div >
+            <div>
+                <h2 className={"text-white text-[64px] font-solid w-[200vw]"}>Welcome to the Project Page</h2>
+            </div>
+            <CreateProject/>
         </div>
+
     );
 }

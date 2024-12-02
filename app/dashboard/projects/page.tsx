@@ -8,6 +8,5 @@ export default function Page() {
             </div>
             <CreateProject/>
         </div>
-
     );
 }

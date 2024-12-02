@@ -7,7 +7,7 @@ export default function Page(){
         redirect(`/sign-up`)
     }
     return(
-        <div className={"flex justify-center items-center min-h-screen sm:justify-left font-bold font-bebas"}>
+        <div className={"flex justify-center items-center min-h-screen sm:justify-left font-bold"}>
             <h2 className={"text-white text-[64px] font-solid "}>Welcome to Augmentify</h2>
             <LottieAnimation/>
         </div>

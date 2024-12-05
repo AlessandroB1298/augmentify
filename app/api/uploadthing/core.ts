@@ -1,9 +1,6 @@
-
-
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 import { auth } from '@clerk/nextjs/server'
-import { metadata } from "@/app/layout";
 
 //create upload thing 
 const f = createUploadthing();
@@ -22,7 +19,10 @@ export const ourFileRouter={
       })
 
       //set our permissions using the middlware
-      .middleware(async ({ req }) => {
+      .middleware(async ({ req}) => {
+        if(req){
+          console.log("there was a request")
+        }
         const user = await auth(); //await auth 
         if(!user.userId){
             throw new UploadThingError("Unauthorized acess") //throw err 

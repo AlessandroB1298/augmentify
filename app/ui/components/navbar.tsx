@@ -9,6 +9,7 @@ import {
     FolderIcon,
     Handshake,
 } from 'lucide-react';
+
 export default function SideNav() {
     const { isSignedIn } = useUser();
     const pathname = usePathname();

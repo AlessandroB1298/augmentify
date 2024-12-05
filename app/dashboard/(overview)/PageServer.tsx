@@ -12,7 +12,6 @@ export default async function PageServer() {
 
     return (
         <div>
-            {/* Pass the user data to the client component */}
             <GreetingComponent />
         </div>
     );

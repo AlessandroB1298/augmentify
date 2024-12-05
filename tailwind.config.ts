@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
-
-export default {
+import { withUt } from "uploadthing/tw";
+/*
+!NOTE: using the uploadthing css library in layout breaks the site, must wrap with withUt
+*/
+export default withUt( {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,4 +21,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+}) satisfies Config;

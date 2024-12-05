@@ -15,14 +15,14 @@ const LottieAnimation=()=>{
             gsap.fromTo(
                 "#content", // Target the parent div instead of the Lottie component NOTE: # means the div id.
                 {
-                    y: 100,
+                    y: 200,
                     opacity: 0,
                 },
                 {
                     y: 0,
                     opacity: 1,
-                    duration: 1.2,
-                    ease: "power1.in",
+                    duration: 1.0,
+                    ease: "power1.inOut",
                 }
             );
         }

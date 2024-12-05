@@ -27,3 +27,7 @@ pnpm run build
 pnpm run dev
 ```
 
+## ToDo
+- [ ] add a way to to upload images to convex 
+- [ ] Fetch projects once they are uploaded from convex
+- [ ] add UI for project page(displaying the images in the project, again from convex)

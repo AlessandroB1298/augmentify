@@ -1,7 +1,9 @@
 import "@/app/ui/global.css";
+// import "@uploadthing/react/styles.css";
 import { inter } from "@/app/ui/fonts";
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { ConvexClientProvider } from "@/app/components/convex-client-provider";
+
 export const metadata: Metadata = {
   title: "Augmentify",
   description: "dataset generator application",
@@ -13,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ConvexClientProvider>
+    <ClerkProvider>
       <html lang="en">
         <head>
           <link
@@ -27,6 +29,6 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-    </ConvexClientProvider>
+    </ClerkProvider>
   );
 }

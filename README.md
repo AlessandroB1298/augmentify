@@ -29,5 +29,6 @@ pnpm run dev
 
 ## ToDo
 - [ ] add a way to to upload images to convex 
+- [x] integrate clerk with the convex backend using webhooks
 - [ ] Fetch projects once they are uploaded from convex
 - [ ] add UI for project page(displaying the images in the project, again from convex)

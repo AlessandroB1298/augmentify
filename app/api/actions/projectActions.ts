@@ -1,6 +1,6 @@
 "use server";
-import { eq, not } from "drizzle-orm";
-import { revalidatePath } from "next/cache";
+// import { eq, not } from "drizzle-orm";
+// import { revalidatePath } from "next/cache";
 import { db } from "@/app/db/drizzle";
 import { projects } from "@/app/db/schema";
 import { currentUser } from "@clerk/nextjs/server";

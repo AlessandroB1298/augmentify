@@ -1,6 +1,5 @@
 import { CreateNewProject } from "@/app/ui/components/buttons";
 import DisplayProjects from "@/app/ui/components/displayProjects";
-import {Suspense} from "react";
 const CreateProject = () => {
   return (
     <div className={"flex w-full h-[70vh] mt-[50px] shadow-lg"}>

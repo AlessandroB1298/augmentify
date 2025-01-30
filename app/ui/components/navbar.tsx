@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useUser, SignedIn, UserButton } from '@clerk/nextjs';
 import { usePathname } from 'next/navigation';
 import {
-    BookOpenIcon,
     ServerIcon,
     FolderIcon,
     Handshake,
@@ -60,11 +59,6 @@ function NavLinks() {
             name: 'Augmentation',
             href: '/dashboard/augmentation',
             icon: ServerIcon
-        },
-        {
-            name: 'Dataset',
-            href: '/dashboard/dataset',
-            icon: BookOpenIcon
         },
         {
             name: 'Projects',

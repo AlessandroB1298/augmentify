@@ -25,3 +25,11 @@ export const addProject = async (name: string, project_type: string, description
    imageUrls : imageUrls,
   });
 };
+
+export const getDatWithProjectId = async (projectId : string)=>{
+
+  const user = await currentUser();
+  if(!user) throw new Error("User not found");
+  const data = await db.select().from(projects).where(eq(projects.id, projectId))
+  return data;
+}

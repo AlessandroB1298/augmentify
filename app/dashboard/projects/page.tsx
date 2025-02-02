@@ -1,62 +1,61 @@
-import React from "react";
 import { CreateNewProject } from "@/app/ui/components/buttons";
 import { getData } from "@/app/api/actions/projectActions";
 import Link from "next/link";
-import { Suspense } from "react"
-//when specifying the path in the Link component use a string literal but don't use the [id]
+import { Suspense } from "react";
+import { Sparkles, Loader2 } from "lucide-react";
 
 async function Projects() {
-  const projects = await getData(); //projects is of ProjeactType[]
+  const projects = await getData();
 
   return (
-    <div>
-      {projects.length > 0 && (
-        <div>
-          <div className={"flex flex-row"}>
-            {projects.map((p, index) => (
-              <div key={index + 1}
-                className={"border-2 border-solid border-black ml-5  mr-5 w-[250px] h-[250px] rounded-lg relative hover:shadow-lg hover:translate-y-3.5 transition duration-300"}>
-                <img
-                  alt={"project images"}
-                  src={p.imageUrls[0]}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <Link
-                  href={`/dashboard/projects/${p.id}`}
-                  className="absolute inset-0 bg-black bg-opacity-50 p-4 text-white z-10 flex-col justify-center items-center text-center "
-                >
-                  {p.name}
-                </Link>
-
-              </div>
-            ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"> {/* To change the width of the project cards change grid-cols */}
+      {projects.map((p, index) => (
+        <Link
+          key={index + 1}
+          href={`/dashboard/projects/${p.id}`}
+          className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+        >
+          <div className="absolute inset-0  opacity-75 group-hover:opacity-90 transition-opacity duration-300" />
+          <img
+            alt="project image"
+            src={p.imageUrls[0] || "/placeholder.svg"}
+            className="w-full h-64 object-cover"
+          />
+          <div className="absolute inset-0 flex flex-col justify-end p-6">
+            <h3 className="text-white text-xl font-bold mb-2 group-hover:mb-4 transition-all duration-300">
+              {p.name}
+            </h3>
+            <div className="h-0 group-hover:h-8 overflow-hidden transition-all duration-300">
+              <Sparkles className="text-white w-6 h-6 inline-block mr-2" />
+              <span className="text-white text-xs font-extrabold">{p.project_type}</span>
+            </div>
           </div>
-        </div>
-      )}
+        </Link>
+      ))}
     </div>
-  )
+  );
 }
-
 
 export default function Page() {
   return (
-    <div className={"flex w-full h-[70vh] mt-[50px] shadow-lg"}>
-      <div
-        className={
-          "flex flex-col border-none border-4 pt-[20px] bg-white w-full rounded-lg "
-        }
-      >
-        <div className="flex justify-between items-center mb-4">
-          <h3 className={"text-rose-400 text-[32px] font-bold ml-5"}>Projects</h3>
+    <div className="min-h-screen bg-white p-8 rounded-xl">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500">
+            Awesome Projects
+          </h1>
           <CreateNewProject />
         </div>
-        <div className="flex flex-row mb-4 w-full">
-          <div className="w-full h-auto">
-            {/* Suspense for loading ui, need to figure out how to get each item*/}
-            <Suspense fallback={<div className="text-center justify-center">Loading...</div>}>
-              <Projects />
-            </Suspense>
-          </div>
+        <div className="bg-gradient-to-br from-rose-100 to-pink-100 p-8 rounded-3xl shadow-lg">
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center h-64">
+                <Loader2 className="w-12 h-12 text-rose-400 animate-spin" />
+              </div>
+            }
+          >
+            <Projects />
+          </Suspense>
         </div>
       </div>
     </div>

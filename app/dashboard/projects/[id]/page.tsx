@@ -1,6 +1,7 @@
 import { getDatWithProjectId } from "@/app/api/actions/projectActions";
-import ProjectCard
- from "@/app/ui/projects/projectCard";
+import ProjectData from "@/app/ui/projects/projectData";
+import { Loader2 } from "lucide-react";
+import { Suspense } from "react";
 export default async function Page({
   params,
 }: {
@@ -19,7 +20,15 @@ export default async function Page({
 
   return <div className="w-full h-full flex justify-center items-center">
     <div className="flex flex-row justify-center w-[100vw]">
-      <ProjectCard data={projectData}/>
+    <Suspense
+            fallback={
+              <div className="flex justify-center items-center h-64">
+                <Loader2 className="w-12 h-12 text-rose-400 animate-spin" />
+              </div>
+            }
+          >
+           <ProjectData data={projectData}/>
+          </Suspense>
     </div>
   </div>
 

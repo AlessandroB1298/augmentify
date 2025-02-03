@@ -7,6 +7,10 @@ export default async function Page({
 }) {
   const { id } = await params;
 
+  if(id != null){
+    console.log("id was successfully passed down")
+  }
+
 
   return <div className="w-full h-full flex justify-center items-center">
     <div className="flex flex-row justify-center w-[100vw]">

@@ -12,6 +12,7 @@ export default function RotateImages(imageUrls : string[], vibrance : number){
                 <Image
                 src={image}
                 height={100}
+                key = {index + 1}
                 width ={100}
                 alt={"some image"}
                 style={{ transform: `rotate(${vibrance})` }}

@@ -1,5 +1,3 @@
-import { getDatWithProjectId } from "@/app/api/actions/projectActions";
-import ProjectData from "@/app/ui/projects/projectData";
 import { Loader2 } from "lucide-react";
 import { Suspense } from "react";
 export default async function Page({
@@ -8,15 +6,6 @@ export default async function Page({
   params: Promise<{ id: string }> // Note: URL params are always strings
 }) {
   const { id } = await params;
-  const data = await getDatWithProjectId(id);
-
-  const projectData = {
-    projectId : data[0].id,
-    imageUrls : data[0].imageUrls,
-    projType : data[0].description,
-    projName : data[0].name,
-    projDesc : data[0].project_type,
-  }
 
 
   return <div className="w-full h-full flex justify-center items-center">
@@ -28,7 +17,6 @@ export default async function Page({
               </div>
             }
           >
-           <ProjectData data={projectData}/>
           </Suspense>
     </div>
   </div>

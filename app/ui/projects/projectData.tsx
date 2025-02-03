@@ -10,6 +10,7 @@ interface ProjectParams {
     projType: string;
     projName: string;
     projDesc: string;
+    projectId : string;
 }
 
 type projectData ={
@@ -28,7 +29,7 @@ const ProjectData = ({ data }: projectData) => {
           <h3 className={"text-rose-400 text-[32px] font-bold ml-5"}>
             {data.projName}
           </h3>
-          <Augment />
+          <Augment id={data.projectId} />
         </div>
         <div className="flex flex-row mb-4 w-full">
           <div>

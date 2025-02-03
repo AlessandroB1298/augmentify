@@ -7,8 +7,11 @@ export  function CreateNewProject(){
     )
 }
 
-export  function Augment(){
+type projectIdParams = {
+    id : string
+}
+export  function Augment({id} : projectIdParams){
     return(
-        <Link href="" className={"bg-pink-400 text-white hover:bg-pink-600 rounded-lg px-5 py-2.5 mr-2.5"}>Augment</Link>
+        <Link href={`/dashboard/augmentation/${id}`} className={"bg-pink-400 text-white hover:bg-pink-600 rounded-lg px-5 py-2.5 mr-2.5"}>Augment</Link>
     )
 }

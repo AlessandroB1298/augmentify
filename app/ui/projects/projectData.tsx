@@ -1,4 +1,5 @@
 import { Augment } from "../components/buttons";
+import Image from "next/image"
 /*
 This is the project Data that will display the user data in 
 a friendly and pretty way.
@@ -41,11 +42,15 @@ const ProjectData = ({ data }: projectData) => {
                     "border-2 border-solid ml-5 border-rose-300 m-3 mr-5 w-36 h-40  flex-wrap rounded-lg relative hover:shadow-lg hover:translate-y-3.5 transition duration-300"
                   }
                 >
-                  <img
+                  <Image
                     alt={"project images"}
                     src={image}
                     className="absolute inset-0 w-full h-full object-cover"
-                  />
+                    placeholder="blur"
+                    blurDataURL="/placeholder.svg"
+                    width={200}
+                    height={200}
+                    />
                 </div>
               ))}
             </div>

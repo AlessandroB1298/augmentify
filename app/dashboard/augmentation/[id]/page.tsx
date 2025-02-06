@@ -1,5 +1,5 @@
-import { Loader2 } from "lucide-react";
-import { Suspense } from "react";
+import { getDatWithProjectId } from "@/app/api/actions/projectActions";
+import AugmentForm from "@/app/ui/augmentation/augmentForm";
 export default async function Page({
   params,
 }: {
@@ -11,18 +11,19 @@ export default async function Page({
     console.log("id was successfully passed down")
   }
 
+  const data = await getDatWithProjectId(id);
+  
+    const projectData = {
+      imageUrls : data[0].imageUrls,
+    }
 
-  return <div className="w-full h-full flex justify-center items-center">
-    <div className="flex flex-row justify-center w-[100vw]">
-    <Suspense
-            fallback={
-              <div className="flex justify-center items-center h-64">
-                <Loader2 className="w-12 h-12 text-rose-400 animate-spin" />
-              </div>
-            }
-          >
-          </Suspense>
-    </div>
+    console.log(JSON.stringify(projectData))
+    
+
+  return <div className=" border-black flex justify-center items-center ">
+        <AugmentForm
+        imageUrls={projectData.imageUrls}
+        />
   </div>
 
 }

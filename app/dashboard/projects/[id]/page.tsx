@@ -19,6 +19,7 @@ export default async function Page({
   }
 
 
+
   return <div className="w-full h-full flex justify-center items-center">
     <div className="flex flex-row justify-center w-[100vw]">
     <Suspense

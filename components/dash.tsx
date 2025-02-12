@@ -54,7 +54,7 @@ export function Dash() {
       {isSignedIn && (
         <div className="max-w-7xl mx-auto space-y-6">
           <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-500 mb-6">
-            {user?.fullName}'s Dashboard
+            {user?.fullName}{"'s"} Dashboard
           </h1>
 
           <section className="grid grid-cols-1 sm:grid-cols-2 lg-grid-cols-4 gap-4">
@@ -66,7 +66,7 @@ export function Dash() {
                 {projectNum}
               </p>
               <p className="mt-1 text-sm font-medium text-rose-400">
-                {user?.fullName}'s Project History
+                {user?.fullName}{"'s"} Project History
               </p>
             </div>
 

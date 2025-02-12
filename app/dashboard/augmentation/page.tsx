@@ -1,12 +1,12 @@
-import React from 'react';
-
+import React from "react";
+import { Dash } from "@/components/dash";
 
 export default function Page() {
-
-
-    return (
-        <div className={"flex justify-center items-center min-h-screen"}>
-            <h2 className={"text-white text-[64px] font-solid"}>Welcome to the Augmentation Page</h2>
-        </div>
-    );
+  return (
+    <>
+      <div className="flex-grow">
+      <Dash />
+      </div>
+    </>
+  );
 }

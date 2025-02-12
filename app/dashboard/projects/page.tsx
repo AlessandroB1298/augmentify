@@ -4,6 +4,9 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { Sparkles, Loader2 } from "lucide-react";
 import Image from "next/image"
+
+
+
 async function Projects() {
   const projects = await getData();
 

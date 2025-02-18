@@ -1,11 +1,11 @@
 import React from "react";
-import { Dash } from "@/components/dash";
-
+import PageServer from "../(overview)/PageServer";
 export default function Page() {
+
   return (
     <>
       <div className="flex-grow">
-      <Dash />
+        <PageServer />
       </div>
     </>
   );

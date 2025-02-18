@@ -1,7 +1,7 @@
 "use client"
 import Lottie, {LottieRefCurrentProps} from 'lottie-react';
 import gsap from "gsap";
-import animationData from "../assets/Animation - 1733037100823.json"
+import animationData from "../../assets/Animation - 1733037100823.json"
 import {useEffect, useRef, useState} from "react";
 
 const LottieAnimation=()=>{

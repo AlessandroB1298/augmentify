@@ -1,4 +1,4 @@
-import { Augment } from "../components/buttons";
+import { Augment } from "../components/ui/buttons";
 import Image from "next/image"
 /*
 This is the project Data that will display the user data in 

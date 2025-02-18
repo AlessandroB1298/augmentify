@@ -1,7 +1,6 @@
 // app/dashboard/(overview)/page.tsx
-
-import PageServer from './PageServer';
+import { Dash } from '@/app/ui/dashboard/dash';
 
 export default function Page() {
-    return <PageServer />;
+    return <Dash />;
 }

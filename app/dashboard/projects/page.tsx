@@ -1,4 +1,4 @@
-import { CreateNewProject } from "@/app/ui/components/buttons";
+import { CreateNewProject } from "@/app/ui/components/ui/buttons";
 import { getData } from "@/app/api/actions/projectActions";
 import Link from "next/link";
 import { Suspense } from "react";

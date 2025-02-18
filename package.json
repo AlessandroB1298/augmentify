@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ai-sdk/deepseek": "^0.1.8",
+    "@ai-sdk/google": "^1.1.14",
     "@clerk/backend": "^1.20.0",
     "@clerk/clerk-react": "^5.18.1",
     "@clerk/nextjs": "^6.5.1",
@@ -23,6 +24,7 @@
     "@radix-ui/react-slider": "^1.2.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@uploadthing/react": "^7.1.2",
+    "ai": "^4.1.41",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -33,6 +35,7 @@
     "embla-carousel-react": "^8.5.2",
     "gsap": "^3.12.5",
     "i": "^0.3.7",
+    "lodash": "^4.17.21",
     "lucide-react": "^0.462.0",
     "next": "15.0.3",
     "outline": "link:@heroicons/react/24/outline",
@@ -40,7 +43,9 @@
     "postgres": "^3.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-markdown": "^9.0.3",
     "recharts": "^2.15.1",
+    "remark-gfm": "^4.0.1",
     "split-type": "^0.3.4",
     "svix": "^1.43.0",
     "tailwind-merge": "^3.0.1",
@@ -49,6 +54,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/lodash": "^4.17.15",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { UploadButton } from "@/app/lib/utils/uploadthing";
 import { addProject } from "@/app/api/actions/projectActions";
 import { useRouter } from 'next/navigation'
+import Image from "next/image";
 
 const NewProjForm = () => {
   const [projectType, setProjectType] = useState<string>("");
@@ -107,7 +108,7 @@ const NewProjForm = () => {
           <div className="mt-6 flex flex-wrap gap-4">
             {image.map((i, index) => (
               <div key={index + 1} className="w-24 h-24 rounded-lg">
-                <img src={i} alt="Uploaded Image" className="object-cover w-full h-full" />
+                <Image src={i} alt="Uploaded Image" className="object-cover w-full h-full" />
               </div>
             ))}
           </div>

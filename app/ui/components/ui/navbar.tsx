@@ -19,9 +19,9 @@ export default function SideNav() {
     }
 
     return (
-        <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-white border-r sm:w-full sm:flex sm:h-[100%] md:flex md:flex-col md:w-full">
+        <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-white border-r sm:w-full sm:flex sm:h-[100%] md:flex md:flex-col md:w-full rounded-md">
             <Link
-                className="mb-6 flex h-20 items-end justify-start rounded-md bg-rose-400 p-4 md:h-40"
+                className="mb-6 flex h-20 items-end justify-start bg-rose-400 p-4 md:h-40 roundex-3xl"
                 href="/dashboard"
             >
                 <div className="w-32 text-white md:w-40 text-2xl font-bold sm:text-[15px]">
@@ -30,7 +30,7 @@ export default function SideNav() {
             </Link>
 
             <div className="flex grow flex-col space-y-2">
-                <NavLinks/>
+                <NavLinks />
 
                 <div className="hidden h-auto w-full grow md:block"></div>
 
@@ -66,9 +66,9 @@ function NavLinks() {
             icon: FolderIcon
         },
         {
-            name : "About",
-            href : "/dashboard/about",
-            icon : Handshake
+            name: "About",
+            href: "/dashboard/about",
+            icon: Handshake
         }
     ];
     return (

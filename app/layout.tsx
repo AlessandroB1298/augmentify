@@ -18,6 +18,7 @@ export default function RootLayout({
         <head>
         </head>
         <body
+          className="bg-rose-300"
         >
           {children}
         </body>

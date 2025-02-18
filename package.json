@@ -37,7 +37,7 @@
     "i": "^0.3.7",
     "lodash": "^4.17.21",
     "lucide-react": "^0.462.0",
-    "next": "15.0.3",
+    "next": "15.1.7",
     "outline": "link:@heroicons/react/24/outline",
     "pg": "^8.13.1",
     "postgres": "^3.4.5",

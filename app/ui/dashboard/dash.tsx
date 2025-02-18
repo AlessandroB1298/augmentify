@@ -32,17 +32,17 @@ export function Dash() {
   }, []);
 
 
-  const getImageTotal = (data : userData[])=>{
-      if(data.length > 0){
-        let imageCounter = 0;
+  const getImageTotal = (data: userData[]) => {
+    if (data.length > 0) {
+      let imageCounter = 0;
 
-        data.forEach((item) => {
-          item?.imageUrls?.forEach(() => {
-            imageCounter++;
-          });
+      data.forEach((item) => {
+        item?.imageUrls?.forEach(() => {
+          imageCounter++;
         });
-        setImageTotal(imageCounter);
-      }
+      });
+      setImageTotal(imageCounter);
+    }
   }
 
   useEffect(() => {
@@ -134,7 +134,7 @@ export function Dash() {
                   aiResponse && (
                     <div className="text-rose-300 font-bold">
                       <ToMarkdown markdownText={aiResponse} />
-                      
+
                     </div>
                   )
                 )}

@@ -11,10 +11,10 @@ export default async function GenerateAiDescription(prompt: string): Promise<str
 
     const googleModel = createGoogleGenerativeAI({
       baseURL: "https://generativelanguage.googleapis.com/v1beta",
-      apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_GENERATIVE_AI_API_KEY
     })
 
-    const model = googleModel('gemini-2.0-flash-001');
+    const model = googleModel('gemini-2.0-flash');
 
 
     const { text } = await generateText({
